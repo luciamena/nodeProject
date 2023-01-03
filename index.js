@@ -15,5 +15,5 @@ app.use(
 require("./src/routes")(app);
 
 app.listen(PORT, () => {
-  console.log(`Example app listening at http://localhost:${PORT}`);
+  console.log(`Example app 2 listening at http://localhost:${PORT}`);
 });
