@@ -11,6 +11,7 @@ app.use(
     credentials: true,
   })
 );
+
 require("./src/routes")(app);
 
 app.listen(PORT, () => {

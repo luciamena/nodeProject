@@ -1,3 +1,4 @@
+const { validateHeaderName } = require("http");
 const mongoose = require("mongoose");
 const userSchema = new mongoose.Schema(
     {
@@ -11,7 +12,7 @@ const userSchema = new mongoose.Schema(
         },
         birthdate: {
             type: Date,
-            default: new Date()
+            required: true
         },
         email: {
             type: String,
@@ -23,6 +24,14 @@ const userSchema = new mongoose.Schema(
         password: {
             type: String,
             required: true
+        },
+        dateCreate:{
+            type: Date,
+            default: Date.now
+        },
+        dateModify:{
+            type: Date,
+            default: Date.now
         }
     }
 );
